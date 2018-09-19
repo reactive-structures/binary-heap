@@ -8,6 +8,8 @@ import {
 import { Push, Pop, Remove, Merge, Heapify } from './actions';
 import { filter } from 'rxjs/operators';
 
+export { BinaryHeapType } from './reducers';
+
 export class BinaryHeap<T> extends Store<IBinaryHeap<T>> {
   static readonly INIT_OPTS = {
     initialArray: [],

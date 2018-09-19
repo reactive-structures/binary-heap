@@ -17,6 +17,8 @@ var store_1 = require("@reactive-redux/store");
 var reducers_1 = require("./reducers");
 var actions_1 = require("./actions");
 var operators_1 = require("rxjs/operators");
+var reducers_2 = require("./reducers");
+exports.BinaryHeapType = reducers_2.BinaryHeapType;
 var BinaryHeap = /** @class */ (function (_super) {
     __extends(BinaryHeap, _super);
     function BinaryHeap(opts) {

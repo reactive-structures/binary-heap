@@ -1,5 +1,6 @@
 import { Store } from '@reactive-redux/store';
 import { IBinaryHeap, BinaryHeapType, IMapWeight } from './reducers';
+export { BinaryHeapType } from './reducers';
 export declare class BinaryHeap<T> extends Store<IBinaryHeap<T>> {
     opts: {
         initialArray?: T[];
