@@ -67,13 +67,15 @@ exports.remove = function (mapWeights, type) {
 exports.merge = function (mapWeights, type) {
     return immer_1.produce(function (state, action) {
         var newState = __spread(state, action.payload.heapToMerge);
-        utils_1._heapify(newState, mapWeights, type);
+        var heapify = utils_1._heapify.bind(newState);
+        heapify(mapWeights, type);
         return newState;
     });
 };
 exports.heapify = function (mapWeights, type) {
     return immer_1.produce(function (state, action) {
-        utils_1._heapify(state, mapWeights, type);
+        var heapify = utils_1._heapify.bind(state);
+        heapify(mapWeights, type);
     });
 };
 exports.clear = function () { return []; };

@@ -26,7 +26,7 @@ var BinaryHeap = /** @class */ (function (_super) {
         var _this = _super.call(this, opts.initialArray || BinaryHeap.INIT_OPTS.initialArray, reducers_1.reducerMap(opts.mapWeights || BinaryHeap.INIT_OPTS.mapWeights, opts.type || reducers_1.BinaryHeapType.MIN)) || this;
         _this.opts = opts;
         _this.size$ = _this.state$.pipe(store_1.select(function (state) { return state.length; }));
-        _this.peek$ = _this.state$.pipe(operators_1.map(function (state) { return state[0]; }), operators_1.filter(function (v) { return !!v; }));
+        _this.peek$ = _this.state$.pipe(operators_1.map(function (state) { return state[0]; }));
         if (opts.initialArray &&
             (opts.heapifyOnInit || BinaryHeap.INIT_OPTS.heapifyOnInit)) {
             _this.heapify();

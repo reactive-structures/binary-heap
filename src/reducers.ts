@@ -62,13 +62,15 @@ export const remove = (mapWeights, type) =>
 export const merge = (mapWeights, type) =>
   produce<IBinaryHeap<any>>((state: IBinaryHeap<any>, action: Merge<any>) => {
     const newState = [...state, ...action.payload.heapToMerge];
-    _heapify(newState, mapWeights, type);
+    const heapify = _heapify.bind(newState);
+    heapify(mapWeights, type);
     return newState;
   });
 
 export const heapify = (mapWeights, type) =>
   produce<IBinaryHeap<any>>((state: IBinaryHeap<any>, action: Heapify) => {
-    _heapify(state, mapWeights, type);
+    const heapify = _heapify.bind(state);
+    heapify(mapWeights, type);
   });
 
 export const clear = () => [];

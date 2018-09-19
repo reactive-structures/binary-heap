@@ -87,14 +87,10 @@ export function _sinkDown(
   }
 }
 
-export function _heapify(
-  array,
-  mapWeights: IMapWeight<any>,
-  type: BinaryHeapType
-) {
-  const bubble = _bubbleUp.bind(array);
-  const sink = _sinkDown.bind(array);
-  const l = array.length;
+export function _heapify(mapWeights: IMapWeight<any>, type: BinaryHeapType) {
+  const bubble = _bubbleUp.bind(this);
+  const sink = _sinkDown.bind(this);
+  const l = this.length;
   for (let rootIndex = _parent(l); rootIndex >= 0; rootIndex--) {
     bubble(rootIndex, mapWeights, type);
     sink(rootIndex, mapWeights, type);

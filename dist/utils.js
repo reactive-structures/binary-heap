@@ -67,10 +67,10 @@ function _sinkDown(n, mapWeights, type) {
     }
 }
 exports._sinkDown = _sinkDown;
-function _heapify(array, mapWeights, type) {
-    var bubble = _bubbleUp.bind(array);
-    var sink = _sinkDown.bind(array);
-    var l = array.length;
+function _heapify(mapWeights, type) {
+    var bubble = _bubbleUp.bind(this);
+    var sink = _sinkDown.bind(this);
+    var l = this.length;
     for (var rootIndex = _parent(l); rootIndex >= 0; rootIndex--) {
         bubble(rootIndex, mapWeights, type);
         sink(rootIndex, mapWeights, type);

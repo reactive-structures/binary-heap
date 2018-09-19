@@ -6,7 +6,7 @@ import {
   IMapWeight
 } from './reducers';
 import { Push, Pop, Remove, Merge, Heapify, Clear } from './actions';
-import { filter, map } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 
 export { BinaryHeapType } from './reducers';
 export class BinaryHeap<T> extends Store<IBinaryHeap<T>> {
@@ -18,10 +18,7 @@ export class BinaryHeap<T> extends Store<IBinaryHeap<T>> {
   };
 
   public size$ = this.state$.pipe(select(state => state.length));
-  public peek$ = this.state$.pipe(
-    map(state => state[0]),
-    filter(v => !!v)
-  );
+  public peek$ = this.state$.pipe(map(state => state[0]));
 
   constructor(
     public opts: {
