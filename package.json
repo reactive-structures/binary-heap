@@ -1,11 +1,16 @@
 {
   "name": "@reactive-structures/binary-heap",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Reactive Binary Heap",
   "scripts": {
     "start": "nodemon",
     "build": "./node_modules/.bin/tsc",
     "npm-publish": "npm run build && npm publish"
+  },
+  "homepage": "https://github.com/reactive-structures/binary-heap",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/reactive-structures/binary-heap"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

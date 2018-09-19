@@ -6,10 +6,9 @@ import {
   IMapWeight
 } from './reducers';
 import { Push, Pop, Remove, Merge, Heapify, Clear } from './actions';
-import { filter } from 'rxjs/operators';
+import { filter, map } from 'rxjs/operators';
 
 export { BinaryHeapType } from './reducers';
-
 export class BinaryHeap<T> extends Store<IBinaryHeap<T>> {
   static readonly INIT_OPTS = {
     initialArray: [],
@@ -20,7 +19,7 @@ export class BinaryHeap<T> extends Store<IBinaryHeap<T>> {
 
   public size$ = this.state$.pipe(select(state => state.length));
   public peek$ = this.state$.pipe(
-    select(state => state[0]),
+    map(state => state[0]),
     filter(v => !!v)
   );
 
