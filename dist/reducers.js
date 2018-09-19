@@ -76,12 +76,14 @@ exports.heapify = function (mapWeights, type) {
         utils_1._heapify(state, mapWeights, type);
     });
 };
+exports.clear = function () { return []; };
 exports.reducerMap = function (mapWeights, type) {
     return new Map([
         [actions_1.BinaryHeapActions.PUSH, exports.push(mapWeights, type)],
         [actions_1.BinaryHeapActions.POP, exports.pop(mapWeights, type)],
         [actions_1.BinaryHeapActions.REMOVE, exports.remove(mapWeights, type)],
         [actions_1.BinaryHeapActions.MERGE, exports.merge(mapWeights, type)],
-        [actions_1.BinaryHeapActions.HEAPIFY, exports.heapify(mapWeights, type)]
+        [actions_1.BinaryHeapActions.HEAPIFY, exports.heapify(mapWeights, type)],
+        [actions_1.BinaryHeapActions.CLEAR, exports.clear]
     ]);
 };

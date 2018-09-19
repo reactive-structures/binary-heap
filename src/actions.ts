@@ -5,7 +5,8 @@ export enum BinaryHeapActions {
   POP = '[Binary Heap] Pop item',
   REMOVE = '[Binary Heap] Remove item',
   MERGE = '[Binary Heap] Merge heap',
-  HEAPIFY = '[Binary Heap] Heapify'
+  HEAPIFY = '[Binary Heap] Heapify',
+  CLEAR = '[Binary Heap] Clear heap'
 }
 
 export class Push<T> implements Action {
@@ -32,4 +33,8 @@ export class Merge<T> implements Action {
 
 export class Heapify implements Action {
   readonly type = BinaryHeapActions.HEAPIFY;
+}
+
+export class Clear implements Action {
+  readonly type = BinaryHeapActions.CLEAR;
 }

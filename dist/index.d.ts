@@ -25,6 +25,7 @@ export declare class BinaryHeap<T> extends Store<IBinaryHeap<T>> {
     push(value: T): void;
     pop(): void;
     remove(value: T): void;
+    clear(): void;
     merge(heapToMerge: T[]): void;
     heapify(): void;
 }

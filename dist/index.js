@@ -42,6 +42,9 @@ var BinaryHeap = /** @class */ (function (_super) {
     BinaryHeap.prototype.remove = function (value) {
         this.dispatch(new actions_1.Remove({ value: value }));
     };
+    BinaryHeap.prototype.clear = function () {
+        this.dispatch(new actions_1.Clear());
+    };
     BinaryHeap.prototype.merge = function (heapToMerge) {
         this.dispatch(new actions_1.Merge({ heapToMerge: heapToMerge }));
     };

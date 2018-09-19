@@ -5,7 +5,7 @@ import {
   BinaryHeapType,
   IMapWeight
 } from './reducers';
-import { Push, Pop, Remove, Merge, Heapify } from './actions';
+import { Push, Pop, Remove, Merge, Heapify, Clear } from './actions';
 import { filter } from 'rxjs/operators';
 
 export { BinaryHeapType } from './reducers';
@@ -58,6 +58,10 @@ export class BinaryHeap<T> extends Store<IBinaryHeap<T>> {
 
   remove(value: T) {
     this.dispatch(new Remove({ value }));
+  }
+
+  clear() {
+    this.dispatch(new Clear());
   }
 
   merge(heapToMerge: T[]) {

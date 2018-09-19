@@ -7,6 +7,7 @@ var BinaryHeapActions;
     BinaryHeapActions["REMOVE"] = "[Binary Heap] Remove item";
     BinaryHeapActions["MERGE"] = "[Binary Heap] Merge heap";
     BinaryHeapActions["HEAPIFY"] = "[Binary Heap] Heapify";
+    BinaryHeapActions["CLEAR"] = "[Binary Heap] Clear heap";
 })(BinaryHeapActions = exports.BinaryHeapActions || (exports.BinaryHeapActions = {}));
 var Push = /** @class */ (function () {
     function Push(payload) {
@@ -46,3 +47,10 @@ var Heapify = /** @class */ (function () {
     return Heapify;
 }());
 exports.Heapify = Heapify;
+var Clear = /** @class */ (function () {
+    function Clear() {
+        this.type = BinaryHeapActions.CLEAR;
+    }
+    return Clear;
+}());
+exports.Clear = Clear;
