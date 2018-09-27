@@ -1,5 +1,6 @@
 import { Store } from '@reactive-redux/store';
 import { IBinaryHeap, BinaryHeapType, IMapWeight } from './reducers';
+import { Observable } from 'rxjs';
 export { BinaryHeapType } from './reducers';
 export declare class BinaryHeap<T> extends Store<IBinaryHeap<T>> {
     opts: {
@@ -14,8 +15,9 @@ export declare class BinaryHeap<T> extends Store<IBinaryHeap<T>> {
         type: BinaryHeapType;
         heapifyOnInit: boolean;
     };
-    size$: import("rxjs/internal/Observable").Observable<number>;
-    peek$: import("rxjs/internal/Observable").Observable<T>;
+    state$: Observable<IBinaryHeap<T>>;
+    size$: Observable<number>;
+    peek$: Observable<T>;
     constructor(opts?: {
         initialArray?: T[];
         mapWeights?: IMapWeight<T>;

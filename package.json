@@ -1,6 +1,6 @@
 {
   "name": "@reactive-structures/binary-heap",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Reactive Binary Heap",
   "scripts": {
     "start": "nodemon",
@@ -17,13 +17,13 @@
   "author": "Zdravko Tatarski",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^10.5.7",
-    "nodemon": "^1.18.3",
-    "ts-node": "^7.0.0",
-    "typescript": "^3.0.1"
+    "jest": "23.6.0",
+    "nodemon": "1.18.3",
+    "ts-node": "7.0.0",
+    "typescript": "3.0.1"
   },
   "dependencies": {
-    "@reactive-redux/store": "^1.0.32",
-    "immer": "^1.7.1"
+    "@reactive-redux/store": "1.0.34",
+    "immer": "1.7.1"
   }
 }
