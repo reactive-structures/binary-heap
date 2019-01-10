@@ -38,3 +38,11 @@ export class Heapify implements Action {
 export class Clear implements Action {
   readonly type = BinaryHeapActions.CLEAR;
 }
+
+export type ActionUnion<T> =
+  | Push<T>
+  | Pop
+  | Remove<T>
+  | Merge<T>
+  | Heapify
+  | Clear;

@@ -1,6 +1,6 @@
 {
   "name": "@reactive-structures/binary-heap",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Reactive Binary Heap",
   "scripts": {
     "start": "nodemon",
@@ -23,7 +23,7 @@
     "typescript": "3.0.1"
   },
   "dependencies": {
-    "@reactive-redux/store": "1.0.34",
+    "@reactive-redux/store": "1.0.52",
     "immer": "1.7.1"
   }
 }

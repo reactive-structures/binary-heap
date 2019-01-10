@@ -76,7 +76,7 @@ export const heapify = (mapWeights, type) =>
 export const clear = () => [];
 
 export const reducerMap = (mapWeights: IMapWeight<any>, type: BinaryHeapType) =>
-  new Map<any>([
+  new Map<any, any>([
     [BinaryHeapActions.PUSH, push(mapWeights, type)],
     [BinaryHeapActions.POP, pop(mapWeights, type)],
     [BinaryHeapActions.REMOVE, remove(mapWeights, type)],

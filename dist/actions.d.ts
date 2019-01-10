@@ -43,3 +43,4 @@ export declare class Heapify implements Action {
 export declare class Clear implements Action {
     readonly type: BinaryHeapActions;
 }
+export declare type ActionUnion<T> = Push<T> | Pop | Remove<T> | Merge<T> | Heapify | Clear;
